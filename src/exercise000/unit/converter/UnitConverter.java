@@ -48,30 +48,88 @@ public class UnitConverter {
     public void lengthConversion(){
 
         if (userInputValueUnitChoice == 1){
+            //milimeters to milimeters - input & output is the same
+            if (userOutputValueUnitChoice == 1){
+                outputValue =  inputValue;
 
-                //milimeters to milimeters - input & output is the same
-                if (userOutputValueUnitChoice == 1){
-                    outputValue =  inputValue;
-
-                //milimeters to centimeters - input
-                } else if (userOutputValueUnitChoice == 2){
-                    outputValue = inputValue * 0.1;
+                //milimeters to centimeters
+            } else if (userOutputValueUnitChoice == 2){
+                outputValue = inputValue * 0.1;
 
                 //milimeters to meters
-                } else if (userOutputValueUnitChoice == 3){
-                    outputValue = inputValue * 0.01;
+            } else if (userOutputValueUnitChoice == 3){
+                outputValue = inputValue * 0.01;
 
                 //milimeters to kilometers
-                } else if (userOutputValueUnitChoice == 4){
-                    outputValue = inputValue * 0.001;
-                } else {
-                    System.out.println("Please enter a valid number in range of 1 to 4.");
-                }
+            } else if (userOutputValueUnitChoice == 4){
+                outputValue = inputValue * 0.001;
+
+            } else {
+                System.out.println("Please enter a valid number in range of 1 to 4.");
+            }
+
         } else if (userInputValueUnitChoice == 2){
+            //cantimeters to milimeters -
+            if (userOutputValueUnitChoice == 1){
+                outputValue = inputValue * 10;
+
+                //centimeters to centimeters - input
+            } else if (userOutputValueUnitChoice == 2){
+                outputValue =  inputValue;
+
+                //centimeters to meters
+            } else if (userOutputValueUnitChoice == 3){
+                outputValue = inputValue * 0.01;
+
+                //centimeters to kilometers
+            } else if (userOutputValueUnitChoice == 4){
+                outputValue = inputValue * 0.00001;
+
+            } else {
+                System.out.println("Please enter a valid number in range of 1 to 4.");
+            }
 
         } else if (userInputValueUnitChoice == 3){
+            //meters to milimeters -
+            if (userOutputValueUnitChoice == 1){
+                outputValue = inputValue * 1000;
+
+                //meters to centimeters - input
+            } else if (userOutputValueUnitChoice == 2){
+                outputValue = inputValue * 100;
+
+                //meters to meters
+            } else if (userOutputValueUnitChoice == 3){
+                outputValue =  inputValue;
+
+                //meters to kilometers
+            } else if (userOutputValueUnitChoice == 4){
+                outputValue = inputValue * 0.001;
+
+            } else {
+                System.out.println("Please enter a valid number in range of 1 to 4.");
+            }
 
         } else if (userInputValueUnitChoice == 4){
+            //kilometers to milimeters -
+            if (userOutputValueUnitChoice == 1){
+                outputValue = inputValue * 1000000;
+
+                //kilometers to centimeters - input
+            } else if (userOutputValueUnitChoice == 2){
+                outputValue = inputValue * 100000;
+
+                //kilometers to meters
+            } else if (userOutputValueUnitChoice == 3){
+                outputValue = inputValue * 1000;
+
+                //kilometers to kilometers
+            } else if (userOutputValueUnitChoice == 4){
+                outputValue =  inputValue;
+
+            } else {
+                System.out.println("Please enter a valid number in range of 1 to 4.");
+            }
 
         } else {
             System.out.println("Please enter a valid number in range of 1 to 4.");
